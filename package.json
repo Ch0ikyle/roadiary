@@ -1,0 +1,23 @@
+{
+  "name": "roadiary",
+  "version": "1.0.0",
+  "description": "2018 GSM 페스티벌, 위치 기반 일기",
+  "main": "app.js",
+  "scripts": {
+    "start" : "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/choikyle66/roadiary.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/choikyle66/roadiary/issues"
+  },
+  "homepage": "https://github.com/choikyle66/roadiary#readme",
+  "dependencies": {
+    "express": "^4.16.4"
+  }
+}

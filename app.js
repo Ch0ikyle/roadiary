@@ -2,9 +2,10 @@ var express = require('express');
 var mysql = require('mysql');
 var bodyParser = require('body-parser');
 var session = require('express-session');
-var fs = require("fs"); 
+var fs = require("fs");
+var flash = require('connect-flash'); 
 var passport = requier('./config/passport.js');
-var dbconfig = require('./db.js');
+var dbconfig = require('./config/db.js');
 var app = express();
 
 var PORT = process.env.PORT || 3000;
@@ -22,6 +23,12 @@ app.use(session({
 	resave : false, // 
 	saveUninitialized : true
 }));
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+var index = require('./router/index.js');
+app.use('/',index);
 
 var server = app.listen(PORT, function(){
     console.log("SERVER START..");
